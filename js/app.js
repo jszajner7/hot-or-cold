@@ -68,11 +68,11 @@ function validation(guessedNumber) {
         return false; // this means, stop the loop and don't do anything else
     }
 
-    //else the guessedNumber is vaild
+    //else the guessedNumber is valid
     else {
         //call the function guessFeedback to guess the feedback
         guessFeedback(secretNumber, guessedNumber);
-        //decress the number of available guesses
+        //decrease the number of available guesses
         counter--;
         //updated the guess history
         guessHistory(guessedNumber);
@@ -144,7 +144,7 @@ function relativeFeedback(secretNumber, oldGuess, newGuess) {
     var newDiff = Math.abs(parseInt(secretNumber) - parseInt(newGuess));
     //compare the oldDiff and newDiff
     if (newDiff > oldDiff) {
-        $('#relitive-feedback').text('You are as colder than the last guess!');
+        $('#relative-feedback').text('You are colder than the last guess!');
     } else if (newDiff === oldDiff) {
         $('#relative-feedback').text('You are as far as your previous guess!')
     } else {
